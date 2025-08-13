@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import bgImage1 from "../assets/bg_1.jpg.webp";
 import bgImage2 from "../assets/bg_2.jpg.webp"; // second image
-import FadeUp from "./animation";
+
 
 const slides = [
   {
@@ -26,7 +26,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="h-screen bg-cover bg-center relative flex items-center justify-center text-white text-center transition-all duration-1000"
+      className="h-screen bg-cover bg-center relative flex items-center justify-center text-white text-center transition-all duration-1000" 
       style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
        data-aos="fade-up"
     >
@@ -40,12 +40,12 @@ const HeroSection = () => {
           className="text-white font-amatic leading-tight 
                        text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl transition-all duration-700"
         >
-          <FadeUp>{slides[currentSlide].heading}</FadeUp>
+          {slides[currentSlide].heading}
         </h1>
 
         {/* Static Paragraph */}
         <p className="mt-4 text-lg md:text-xl">
-         <FadeUp> We Deliver Organic Vegetables & Fruits</FadeUp>
+         We Deliver Organic Vegetables & Fruits
         </p>
 
         {/* Static Button */}
